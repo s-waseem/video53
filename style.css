@@ -72,8 +72,10 @@ nav button {
   text-align: center;
 }
 .separation {
-  height: 11px;
-  background-color: rgb(66, 66, 66);
+  height: 7px;
+  background-color: rgb(46, 44, 44);
+  position: relative;
+  z-index: 20;
 }
 .btn {
   padding: 3px 8px;
@@ -112,7 +114,87 @@ nav button {
   justify-content: center;
   align-items: center;
 }
-.secImg{
-  width: 30px;
+@media screen and (max-width: 1300px) {
+  .first {
+    flex-wrap: wrap;
+  }
+}
 
+.secImg {
+  position: relative;
+}
+
+.secImg img {
+  width: 450px;
+  position: relative;
+  z-index: 10;
+}
+
+.secImg video {
+  position: absolute;
+  top: 51px;
+  right: 0;
+  width: 450px;
+}
+section.first > div {
+  display: flex;
+  flex-direction: column;
+}
+section.first > div :first-child {
+  font-size: 48px;
+  font-weight: bolder;
+}
+section.first > div :nth-child(2) {
+  font-size: 24px;
+}
+.faq h2 {
+  font-size: 45px;
+}
+.faq {
+  color: white;
+  text-align: center;
+  padding: 34px;
+}
+.faqbox:hover {
+  background-color: red;
+}
+.faqbox {
+  transition: all 1s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  background-color: #2d2d2d;
+  padding: 10px;
+  max-width: 60vw;
+  margin: 24px auto;
+  cursor: pointer;
+}
+footer {
+  color: white;
+  max-width: 80vw;
+  margin: auto;
+  padding: 34px;
+  .question {
+    padding: 34px 0px;
+  }
+}
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: white;
+}
+@media screen and (max-width: 1300px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+  }
+}
+.footer a {
+  color: white;
+}
+.footer-item {
+  display: grid;
+  grid-auto-flow: row;
+  align-content: center;
+  gap: 30px;
 }
